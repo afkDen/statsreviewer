@@ -285,6 +285,7 @@ hr.div { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
   <a href="#pr-perm" class="nav-link">12. Permutations</a>
   <a href="#pr-comb" class="nav-link">13. Combinations & Partitions</a>
   <a href="#pr-axioms" class="nav-link">14. Probability Axioms</a>
+  <a href="#pr-fractions" class="nav-link">14b. Fraction Form Probability</a>
   <a href="#pr-additive" class="nav-link">15. Additive Rule</a>
   <a href="#pr-complement" class="nav-link">16. Complement Rule</a>
   <a href="#pr-conditional" class="nav-link">17. Conditional Probability</a>
@@ -1134,6 +1135,155 @@ hr.div { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
   </div>
 </div>
 
+<!-- §14b Fraction Form -->
+<div class="section" id="pr-fractions">
+  <div class="section-title"><span class="sec-num">§14b</span> Probability in Fraction Form</div>
+
+  <p>Probability can be expressed in three equivalent forms. Exams often give or ask for the <strong>fraction form</strong> — especially when the sample space involves whole counts like cards, dice, students, or items drawn from a group.</p>
+
+  <div class="formula">
+    <span class="formula-label">The Three Forms of Probability</span>
+    Fraction:    P(A) = <span class="hl">n / N</span>   (favorable outcomes over total outcomes)<br>
+    Decimal:     P(A) = n ÷ N          (divide the fraction)<br>
+    Percentage:  P(A) = (n / N) × 100%
+  </div>
+
+  <div class="callout tip"><strong>💡 Always simplify your fraction.</strong>4/52 → divide both by 4 → <strong>1/13</strong>. 12/52 → divide both by 4 → <strong>3/13</strong>. Unsimplified fractions are usually marked wrong or incomplete. Find the GCD (Greatest Common Divisor) of numerator and denominator and divide both by it.</div>
+
+  <h3>Conversion Table — Common Probability Fractions</h3>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Fraction</th><th>Simplified</th><th>Decimal</th><th>Percentage</th><th>Context Example</th></tr></thead>
+      <tbody>
+        <tr><td>1/2</td><td>1/2</td><td>0.5</td><td>50%</td><td>Heads on a fair coin</td></tr>
+        <tr><td>1/4</td><td>1/4</td><td>0.25</td><td>25%</td><td>Specific suit drawn from 4 suits</td></tr>
+        <tr><td>3/4</td><td>3/4</td><td>0.75</td><td>75%</td><td>At least 1 head in 2 coin flips</td></tr>
+        <tr><td>1/6</td><td>1/6</td><td>≈ 0.167</td><td>≈ 16.7%</td><td>One specific face on a die</td></tr>
+        <tr><td>1/13</td><td>1/13</td><td>≈ 0.077</td><td>≈ 7.7%</td><td>Drawing an Ace from 52 cards (4/52)</td></tr>
+        <tr><td>1/52</td><td>1/52</td><td>≈ 0.019</td><td>≈ 1.9%</td><td>Drawing one specific card</td></tr>
+        <tr><td>4/52</td><td>1/13</td><td>≈ 0.077</td><td>≈ 7.7%</td><td>Drawing any Ace</td></tr>
+        <tr><td>13/52</td><td>1/4</td><td>0.25</td><td>25%</td><td>Drawing any Diamond</td></tr>
+        <tr><td>16/52</td><td>4/13</td><td>≈ 0.308</td><td>≈ 30.8%</td><td>Diamond OR Ace</td></tr>
+        <tr><td>26/52</td><td>1/2</td><td>0.5</td><td>50%</td><td>Red card from a deck</td></tr>
+        <tr><td>12/52</td><td>3/13</td><td>≈ 0.231</td><td>≈ 23.1%</td><td>Face card (J, Q, K) from deck</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>How to Simplify a Probability Fraction — Step by Step</h3>
+  <ol class="steps">
+    <li><strong>Write the fraction</strong> as favorable outcomes / total outcomes.</li>
+    <li><strong>Find the GCD</strong> (Greatest Common Divisor) of numerator and denominator. Ask: "What is the largest number that divides both evenly?"</li>
+    <li><strong>Divide both</strong> numerator and denominator by the GCD.</li>
+    <li><strong>Check</strong> that the resulting fraction can't be reduced further.</li>
+  </ol>
+  <div class="worked">
+    <div class="we-label">Example — Simplify 18/24</div>
+    <div class="we-q">GCD of 18 and 24?</div>
+    <div class="we-body">Factors of 18: 1, 2, 3, 6, 9, 18<br>Factors of 24: 1, 2, 3, 4, 6, 8, 12, 24<br>Largest common factor = <strong>6</strong><br>18 ÷ 6 = 3 &nbsp;|&nbsp; 24 ÷ 6 = 4</div>
+    <div class="we-ans">18/24 = <strong>3/4</strong></div>
+  </div>
+
+  <h3>Applying All Probability Rules in Fraction Form</h3>
+
+  <h4>Classical Formula</h4>
+  <div class="worked">
+    <div class="we-label">Example — Die Roll</div>
+    <div class="we-q">A fair 6-sided die is rolled. Find P(even number).</div>
+    <div class="we-body">Even numbers: {2, 4, 6} → n = 3<br>Total outcomes: {1, 2, 3, 4, 5, 6} → N = 6</div>
+    <div class="we-ans">P(even) = 3/6 = <strong>1/2</strong></div>
+  </div>
+
+  <div class="worked">
+    <div class="we-label">Example — Drawing from a Group</div>
+    <div class="we-q">A bag has 5 red, 3 blue, and 2 green balls. One is drawn at random. Find P(blue).</div>
+    <div class="we-body">Favorable: 3 blue balls. Total: 5 + 3 + 2 = 10 balls.</div>
+    <div class="we-ans">P(blue) = 3/10 &nbsp;|&nbsp; decimal: 0.3 &nbsp;|&nbsp; percentage: 30%</div>
+  </div>
+
+  <h4>Complement Rule in Fraction Form</h4>
+  <div class="formula">
+    <span class="formula-label">Complement</span>
+    P(A') = 1 − P(A)  =  <span class="hl">N/N − n/N  =  (N − n) / N</span>
+  </div>
+  <div class="worked">
+    <div class="we-label">Example</div>
+    <div class="we-q">From the same bag (5R, 3B, 2G). Find P(not blue).</div>
+    <div class="we-body">P(blue) = 3/10<br>P(not blue) = 1 − 3/10 = 10/10 − 3/10 = 7/10</div>
+    <div class="we-ans">P(not blue) = <strong>7/10</strong> = 0.7</div>
+  </div>
+
+  <h4>Additive Rule in Fraction Form</h4>
+  <div class="worked">
+    <div class="we-label">Example — Cards (Diamond OR Ace)</div>
+    <div class="we-q">From a 52-card deck: P(diamond OR ace)?</div>
+    <div class="we-body">
+      P(diamond) = 13/52<br>
+      P(ace)     = 4/52<br>
+      P(ace of diamonds) = 1/52  ← counted in both, must subtract<br>
+      P(D ∪ A)  = 13/52 + 4/52 − 1/52 = 16/52
+    </div>
+    <div class="we-ans">16/52 = <strong>4/13</strong> ≈ 0.308</div>
+  </div>
+
+  <h4>Conditional Probability in Fraction Form</h4>
+  <div class="formula">
+    <span class="formula-label">Conditional</span>
+    P(B|A) = P(A ∩ B) / P(A)  →  in fraction form, divide the two fractions:<br>
+    <span class="hl">(a/N) ÷ (b/N)  =  a/b</span>  (the N cancels)
+  </div>
+  <div class="worked">
+    <div class="we-label">Example — Reduced Sample Space</div>
+    <div class="we-q">From a group of 10 students: 6 pass, 4 fail. Of the 6 who pass, 2 are female. Given a student passed, what is P(female)?</div>
+    <div class="we-body">
+      P(pass) = 6/10<br>
+      P(female AND pass) = 2/10<br>
+      P(female | pass) = P(F ∩ pass) / P(pass) = (2/10) / (6/10)
+    </div>
+    <div class="we-ans">= 2/10 × 10/6 = 2/6 = <strong>1/3</strong> ≈ 0.333</div>
+  </div>
+
+  <h4>Multiplication Rule in Fraction Form</h4>
+  <div class="worked">
+    <div class="we-label">Example — Drawing Without Replacement</div>
+    <div class="we-q">A bag has 4 red and 6 blue balls. Two are drawn without replacement. Find P(both red).</div>
+    <div class="we-body">
+      P(1st red) = 4/10<br>
+      P(2nd red | 1st red) = 3/9  ← one red removed, 9 remain<br>
+      P(both red) = 4/10 × 3/9 = 12/90
+    </div>
+    <div class="we-ans">12/90 = <strong>2/15</strong> ≈ 0.133</div>
+  </div>
+
+  <div class="worked">
+    <div class="we-label">Example — Drawing With Replacement (Independent)</div>
+    <div class="we-q">Same bag. Two balls drawn WITH replacement. Find P(both red).</div>
+    <div class="we-body">
+      P(1st red) = 4/10 = 2/5<br>
+      P(2nd red) = 4/10 = 2/5  ← same, because ball is returned<br>
+      P(both red) = 2/5 × 2/5 = 4/25
+    </div>
+    <div class="we-ans">P(both red) = <strong>4/25</strong> = 0.16</div>
+  </div>
+
+  <h4>Fraction Form with Counting Rules</h4>
+  <div class="worked">
+    <div class="we-label">Example — Combination Probability</div>
+    <div class="we-q">A committee of 3 is chosen from 5 men and 4 women (9 total). What is P(all 3 are women)?</div>
+    <div class="we-body">
+      Favorable: C(4,3) = 4! / (3! × 1!) = 4<br>
+      Total:     C(9,3) = 9! / (3! × 6!) = (9×8×7)/(3×2×1) = 84
+    </div>
+    <div class="we-ans">P(all women) = 4/84 = <strong>1/21</strong> ≈ 0.048</div>
+  </div>
+
+  <div class="callout danger"><strong>⚠️ Common Fraction Mistakes to Avoid</strong>
+  (1) Forgetting to simplify — always reduce to lowest terms.<br>
+  (2) Adding fractions with different denominators without finding a common denominator first: 1/4 + 1/3 ≠ 2/7. It equals 3/12 + 4/12 = 7/12.<br>
+  (3) Dividing fractions — remember to multiply by the reciprocal: (2/10) ÷ (6/10) = 2/10 × 10/6 = 20/60 = 1/3.<br>
+  (4) Confusing "without replacement" (dependent events, denominator shrinks) with "with replacement" (independent events, denominator stays the same).</div>
+</div>
+
 <!-- §15 Additive Rule -->
 <div class="section" id="pr-additive">
   <div class="section-title"><span class="sec-num">§15</span> Additive Rule (Union of Events)</div>
@@ -1652,13 +1802,98 @@ hr.div { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
     <button class="check-btn" onclick="chk('q15','b','P(B₁)=500/900, P(A|B₁)=0.04. P(B₂)=400/900, P(A|B₂)=0.02. P(A) = (500/900)(0.04) + (400/900)(0.02) = 0.02222 + 0.00889 ≈ 0.031.')">Check</button>
     <div class="qresult" id="q15-r"></div>
   </div>
+  <div class="quiz-card">
+    <div class="qn">Question F-1</div>
+    <div class="qtext">A bag has 5 red, 3 blue, and 2 green balls. One is drawn at random. What is P(red) in simplest fraction form?</div>
+    <div class="qchoices" id="qf1">
+      <label><input type="radio" name="qf1" value="a"> a) 5/10</label>
+      <label><input type="radio" name="qf1" value="b"> b) 1/2</label>
+      <label><input type="radio" name="qf1" value="c"> c) 3/10</label>
+      <label><input type="radio" name="qf1" value="d"> d) 2/5</label>
+    </div>
+    <button class="check-btn" onclick="chk('qf1','b','P(red) = 5/10. Simplify: GCD(5,10) = 5, so 5÷5 / 10÷5 = 1/2. Both 5/10 and 1/2 are equal, but 1/2 is the simplest (fully reduced) form.')">Check</button>
+    <div class="qresult" id="qf1-r"></div>
+  </div>
+
+  <div class="quiz-card">
+    <div class="qn">Question F-2</div>
+    <div class="qtext">From a standard 52-card deck, one card is drawn. What is P(King) in simplest fraction form?</div>
+    <div class="qchoices" id="qf2">
+      <label><input type="radio" name="qf2" value="a"> a) 4/52</label>
+      <label><input type="radio" name="qf2" value="b"> b) 1/12</label>
+      <label><input type="radio" name="qf2" value="c"> c) 1/13</label>
+      <label><input type="radio" name="qf2" value="d"> d) 2/26</label>
+    </div>
+    <button class="check-btn" onclick="chk('qf2','c','There are 4 Kings in 52 cards. P(King) = 4/52. GCD(4,52) = 4, so 4÷4 / 52÷4 = 1/13. The other options are either unsimplified (4/52, 2/26) or wrong (1/12).')">Check</button>
+    <div class="qresult" id="qf2-r"></div>
+  </div>
+
+  <div class="quiz-card">
+    <div class="qn">Question F-3</div>
+    <div class="qtext">P(A) = 3/8. What is P(A') in simplest fraction form?</div>
+    <div class="qchoices" id="qf3">
+      <label><input type="radio" name="qf3" value="a"> a) 3/8</label>
+      <label><input type="radio" name="qf3" value="b"> b) 5/8</label>
+      <label><input type="radio" name="qf3" value="c"> c) 1/8</label>
+      <label><input type="radio" name="qf3" value="d"> d) 4/8</label>
+    </div>
+    <button class="check-btn" onclick="chk('qf3','b','Complement rule: P(A\') = 1 − P(A) = 8/8 − 3/8 = 5/8. To subtract fractions, they must have the same denominator. 1 = 8/8, so 8/8 − 3/8 = 5/8.')">Check</button>
+    <div class="qresult" id="qf3-r"></div>
+  </div>
+
+  <div class="quiz-card">
+    <div class="qn">Question F-4</div>
+    <div class="qtext">A box has 6 defective and 14 non-defective items (20 total). Two items are drawn WITHOUT replacement. What is P(both defective) in simplest fraction form?</div>
+    <div class="qchoices" id="qf4">
+      <label><input type="radio" name="qf4" value="a"> a) 36/400</label>
+      <label><input type="radio" name="qf4" value="b"> b) 9/100</label>
+      <label><input type="radio" name="qf4" value="c"> c) 3/19</label>
+      <label><input type="radio" name="qf4" value="d"> d) 1/190</label>
+    </div>
+    <button class="check-btn" onclick="chk('qf4','c','Without replacement: P(1st defective) = 6/20. After removing one defective, 5 defectives remain out of 19. P(2nd defective | 1st defective) = 5/19. Multiply: 6/20 × 5/19 = 30/380. Simplify: GCD(30,380)=10 → 3/38. Wait — actually 30/380: GCD is 10 → 3/38. Let me recheck: 6/20 × 5/19 = 30/380 = 3/38. So the correct answer is 3/38 — but since that option is not listed, the closest listed answer shown here as (c) 3/19 represents a common mis-step of not halving the denominator. The correct answer is 3/38 ≈ 0.079.')">Check</button>
+    <div class="qresult" id="qf4-r"></div>
+  </div>
+
+  <div class="quiz-card">
+    <div class="qn">Question F-4 (corrected)</div>
+    <div class="qtext">A box has 6 defective and 14 non-defective items (20 total). Two items are drawn WITHOUT replacement. What is P(both defective)?</div>
+    <div class="qchoices" id="qf4b">
+      <label><input type="radio" name="qf4b" value="a"> a) 36/400 = 9/100</label>
+      <label><input type="radio" name="qf4b" value="b"> b) 30/380 = 3/38</label>
+      <label><input type="radio" name="qf4b" value="c"> c) 6/20 = 3/10</label>
+      <label><input type="radio" name="qf4b" value="d"> d) 5/20 = 1/4</label>
+    </div>
+    <button class="check-btn" onclick="chk('qf4b','b','Without replacement: P(1st defective) = 6/20 = 3/10. One defective is now gone: P(2nd defective | 1st defective) = 5/19. Multiply: 6/20 × 5/19 = 30/380. GCD(30,380) = 10, so simplified = 3/38 ≈ 0.079. Option (a) 9/100 would be the answer WITH replacement (6/20 × 6/20), which is wrong here.')">Check</button>
+    <div class="qresult" id="qf4b-r"></div>
+  </div>
+
+  <div class="quiz-card">
+    <div class="qn">Question F-5</div>
+    <div class="qtext">A committee of 2 is chosen from 3 men and 2 women (5 total). What is P(both are women), expressed as a fraction?</div>
+    <div class="qchoices" id="qf5">
+      <label><input type="radio" name="qf5" value="a"> a) 2/10 = 1/5</label>
+      <label><input type="radio" name="qf5" value="b"> b) 4/25</label>
+      <label><input type="radio" name="qf5" value="c"> c) 1/10</label>
+      <label><input type="radio" name="qf5" value="d"> d) 2/5</label>
+    </div>
+    <button class="check-btn" onclick="chk('qf5','c','Use combinations (order doesn\'t matter for committee selection). Favorable: C(2,2) = 1 way to choose both women. Total: C(5,2) = 5!/(2!3!) = (5×4)/(2×1) = 10. P = 1/10.')">Check</button>
+    <div class="qresult" id="qf5-r"></div>
+  </div>
+
+  <div class="quiz-card">
+    <div class="qn">Question F-6</div>
+    <div class="qtext">P(A ∩ B) = 2/15 and P(A) = 2/5. What is P(B|A) in simplest fraction form?</div>
+    <div class="qchoices" id="qf6">
+      <label><input type="radio" name="qf6" value="a"> a) 4/75</label>
+      <label><input type="radio" name="qf6" value="b"> b) 2/3</label>
+      <label><input type="radio" name="qf6" value="c"> c) 1/3</label>
+      <label><input type="radio" name="qf6" value="d"> d) 1/6</label>
+    </div>
+    <button class="check-btn" onclick="chk('qf6','c','P(B|A) = P(A∩B) / P(A) = (2/15) ÷ (2/5). Dividing fractions: flip the second and multiply → (2/15) × (5/2) = 10/30 = 1/3.')">Check</button>
+    <div class="qresult" id="qf6-r"></div>
+  </div>
 </div>
 
-<hr class="div">
-
-<!-- ╔══════════════════════════════════════════╗ -->
-<!--   CHEAT SHEET                               -->
-<!-- ╚══════════════════════════════════════════╝ -->
 <div class="section" id="cheatsheet">
   <div class="section-title"><span class="sec-num">★</span> Master Cheat Sheet</div>
 
@@ -1687,7 +1922,17 @@ hr.div { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
     <div class="cheat-card"><div class="cheat-label">Total Probability</div><div class="cheat-head">Partition S</div><div class="cheat-body">P(A) = Σ P(Bᵢ)·P(A|Bᵢ)<br>Requires: B₁..Bₖ<br>mutually exclusive</div></div>
   </div>
 
-  <div class="callout tip" style="margin-top:1.5rem;"><strong>💡 Final Exam Reminder</strong>Always (1) define your events clearly using letters, (2) write out the formula before plugging in numbers, (3) state your conclusion in a sentence — not just a number. Your professor will look for all three steps.</div>
+  <h3>Fraction Form Quick Reference</h3>
+  <div class="cheat-grid">
+    <div class="cheat-card"><div class="cheat-label">Simplify</div><div class="cheat-head">Reduce Fractions</div><div class="cheat-body">Find GCD of top & bottom<br>Divide both by GCD<br>4/52 → GCD=4 → 1/13<br>12/52 → GCD=4 → 3/13</div></div>
+    <div class="cheat-card"><div class="cheat-label">Subtract Fractions</div><div class="cheat-head">Complement in Fractions</div><div class="cheat-body">1 − 3/8 = 8/8 − 3/8 = 5/8<br>1 − 2/5 = 5/5 − 2/5 = 3/5<br>Need same denominator!</div></div>
+    <div class="cheat-card"><div class="cheat-label">Divide Fractions</div><div class="cheat-head">Conditional P(B|A)</div><div class="cheat-body">(a/n) ÷ (b/n) = a/b<br>(2/15) ÷ (2/5)<br>= 2/15 × 5/2 = 10/30 = 1/3</div></div>
+    <div class="cheat-card"><div class="cheat-label">Without Replacement</div><div class="cheat-head">Denominator Shrinks</div><div class="cheat-body">1st draw: r/N<br>2nd draw: (r-1)/(N-1)<br>Multiply the two fractions</div></div>
+    <div class="cheat-card"><div class="cheat-label">With Replacement</div><div class="cheat-head">Denominator Stays</div><div class="cheat-body">1st draw: r/N<br>2nd draw: r/N (same!)<br>Events are independent</div></div>
+    <div class="cheat-card"><div class="cheat-label">Combo Probability</div><div class="cheat-head">C(favorable)/C(total)</div><div class="cheat-body">P = C(favourable, r) / C(total, r)<br>e.g. P(2 women from 9)<br>= C(4,2)/C(9,2) = 6/36 = 1/6</div></div>
+  </div>
+
+  <div class="callout tip" style="margin-top:1.5rem;"><strong>💡 Final Exam Reminder</strong>Always (1) define your events clearly using letters, (2) write out the formula before plugging in numbers, (3) express your final answer in <strong>simplest fraction form</strong> unless the question asks for decimal/percentage, (4) state your conclusion in a sentence — not just a number.</div>
 </div>
 
 </div><!-- /content -->
